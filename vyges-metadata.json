@@ -28,7 +28,7 @@
       "rtl/usbdev_usbif.sv"
     ]
   },
-  "updated": "2026-02-19T06:12:02Z",
+  "updated": "2026-02-19T06:22:56Z",
   "$schema": "https://vyges.com/schema/v1/vyges-metadata.schema.json",
   "x-version": "1.0.0",
   "description": "Usbdev. OpenTitan IP block from hw/ip/usbdev.",
@@ -73,5 +73,11 @@
   "community": {
     "issues": "https://github.com/vyges-ip/opentitan-usbdev/issues",
     "contributions": "https://github.com/vyges-ip/opentitan-usbdev/pulls"
+  },
+  "branding": {
+    "provider": "Vyges IP Catalog",
+    "logo": "https://vyges.com/assets/logo.svg",
+    "website": "https://github.com/vyges-ip/opentitan-usbdev",
+    "usage": "Use of the logo is permitted for attribution or compatibility references only."
   }
 }
