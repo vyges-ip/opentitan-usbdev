@@ -28,7 +28,7 @@
       "rtl/usbdev_usbif.sv"
     ]
   },
-  "updated": "2026-02-19T06:22:56Z",
+  "updated": "2026-03-24T02:12:59Z",
   "$schema": "https://vyges.com/schema/v1/vyges-metadata.schema.json",
   "x-version": "1.0.0",
   "description": "Usbdev. OpenTitan IP block from hw/ip/usbdev.",
@@ -40,7 +40,7 @@
   "design_type": [
     "digital"
   ],
-  "maturity": "imported",
+  "maturity": "prototype",
   "created": "2026-02-19T06:12:02Z",
   "interfaces": [
     {
@@ -48,7 +48,38 @@
       "direction": "input",
       "protocol": "TL-UL",
       "width": 32,
-      "description": "TL-UL host interface for register access"
+      "description": "TL-UL host interface for register access",
+      "signals": [
+        {
+          "name": "clk_i",
+          "direction": "input",
+          "type": "clock",
+          "width": 1,
+          "description": "System clock"
+        },
+        {
+          "name": "rst_ni",
+          "direction": "input",
+          "type": "reset",
+          "width": 1,
+          "active_level": "low",
+          "description": "Active-low synchronous reset"
+        },
+        {
+          "name": "tl_i",
+          "direction": "input",
+          "type": "data",
+          "width": 1,
+          "description": "TL-UL host-to-device (tl_h2d_t struct) \u2014 connect to xbar slave port"
+        },
+        {
+          "name": "tl_o",
+          "direction": "output",
+          "type": "data",
+          "width": 1,
+          "description": "TL-UL device-to-host (tl_d2h_t struct) \u2014 connect to xbar slave port"
+        }
+      ]
     },
     {
       "type": "bus",
