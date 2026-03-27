@@ -1,43 +1,29 @@
-# USB 2.0 Full-Speed Device HWIP Technical Specification
+# OpenTitan
 
-[`usbdev`](https://reports.opentitan.org/hw/ip/usbdev/dv/latest/report.html):
-![](https://dashboards.lowrisc.org/badges/dv/usbdev/test.svg)
-![](https://dashboards.lowrisc.org/badges/dv/usbdev/passing.svg)
-![](https://dashboards.lowrisc.org/badges/dv/usbdev/functional.svg)
-![](https://dashboards.lowrisc.org/badges/dv/usbdev/code.svg)
+![OpenTitan logo](./doc/opentitan-logo.png)
 
-# Overview
+## About the project
 
-This document specifies the USB device hardware IP functionality.
-This IP block implements a Full-Speed device according to the [USB 2.0 specification.](https://www.usb.org/document-library/usb-20-specification)
-It is attached to the chip interconnect bus as a peripheral module and conforms to the [Comportable guideline for peripheral functionality.](../../../doc/contributing/hw/comportability/README.md)
+[OpenTitan](https://opentitan.org) is an open source silicon Root of Trust (RoT) project.
+OpenTitan will make the silicon RoT design and implementation more transparent, trustworthy, and secure for enterprises, platform providers, and chip manufacturers.
+OpenTitan is administered by [lowRISC CIC](https://www.lowrisc.org) as a collaborative project to produce high quality, open IP for instantiation as a full-featured product.
+See the [OpenTitan site](https://opentitan.org) and [OpenTitan docs](https://opentitan.org/book/) for more information about the project.
 
+## About this repository
 
-## Features
+This repository contains hardware, software and utilities written as part of the OpenTitan project.
+It is structured as monolithic repository, or "monorepo", where all components live in one repository.
+It exists to enable collaboration across partners participating in the OpenTitan project.
 
-The IP block implements the following features:
+## Documentation
 
-- USB 2.0 Full-Speed (12 Mbps) Device interface
-- 2 kB interface buffer
-- Up to 12 endpoints (including required Endpoint 0), configurable using a compile-time Verilog parameter
-- Support for USB packet sizes up to 64 bytes
-- Support SETUP, IN and OUT transactions
-- Support for Bulk, Control, Interrupt and Isochronous endpoints and transactions
-- Streaming possible through software
-- Interrupts for packet reception and transmission
-- Flippable D+/D- pins, configurable via software, useful if it helps routing the PCB or if D+/D- are mapped to SBU1/SBU2 pins of USB-C
+The project contains comprehensive documentation of all IPs and tools.
+You can access it [online at opentitan.org/book/](https://opentitan.org/book/).
 
-Isochronous transfers larger than 64 bytes are currently not supported.
-This feature might be added in a later version of this IP.
+## How to contribute
 
+Have a look at [CONTRIBUTING](CONTRIBUTING.md) and our [documentation on project organization and processes](./doc/project_governance/README.md) for guidelines on how to contribute code to this repository.
 
-## Description
+## Licensing
 
-The USB device module is a simple software-driven generic USB device interface for Full-Speed USB 2.0 operation.
-The IP includes the physical layer interface, the low level USB protocol and a packet buffer interface to the software.
-The physical layer interface features multiple transmit and receive paths to allow interfacing with a variety of USB PHYs or regular 3.3V IO pads for FPGA prototyping.
-
-
-## Compatibility
-
-The USB device programming interface is not based on any existing interface.
+Unless otherwise noted, everything in this repository is covered by the Apache License, Version 2.0 (see [LICENSE](https://github.com/lowRISC/opentitan/blob/master/LICENSE) for full text).
