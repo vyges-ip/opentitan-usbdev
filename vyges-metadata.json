@@ -14,7 +14,7 @@
     "digital"
   ],
   "created": "2026-03-27T23:06:08Z",
-  "updated": "2026-03-27T23:06:08Z",
+  "updated": "2026-04-02T03:11:53Z",
   "source": {
     "type": "git",
     "url": "https://github.com/lowRISC/opentitan",
@@ -280,5 +280,36 @@
     "schema": {
       "version": "1.0.0"
     }
-  }
+  },
+  "rtl_files": [
+    "rtl/usb_consts_pkg.sv",
+    "rtl/usb_fs_nb_in_pe.sv",
+    "rtl/usb_fs_nb_out_pe.sv",
+    "rtl/usb_fs_nb_pe.sv",
+    "rtl/usb_fs_rx.sv",
+    "rtl/usb_fs_tx.sv",
+    "rtl/usb_fs_tx_mux.sv",
+    "rtl/usbdev.sv",
+    "rtl/usbdev_aon_wake.sv",
+    "rtl/usbdev_counter.sv",
+    "rtl/usbdev_iomux.sv",
+    "rtl/usbdev_linkstate.sv",
+    "rtl/usbdev_pkg.sv",
+    "rtl/usbdev_reg_pkg.sv",
+    "rtl/usbdev_reg_top.sv",
+    "rtl/usbdev_usbif.sv"
+  ],
+  "rtl_quality": {
+    "module_prefixed": true,
+    "defines_prefixed": true,
+    "header_guards": false,
+    "one_module_per_file": true,
+    "self_contained_includes": false,
+    "no_translate_pragmas": true,
+    "lint_clean": false,
+    "no_casex": true,
+    "width_clean": false,
+    "no_sv_keyword_conflicts": true
+  },
+  "defines": []
 }
