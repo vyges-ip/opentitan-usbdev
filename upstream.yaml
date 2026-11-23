@@ -3,7 +3,7 @@ upstream:
   type: "monorepo"
   source: https://github.com/lowRISC/opentitan
   path: hw/ip/usbdev
-  commit: 4ced702ca207ad420fbae5226ac8685a17ebef7b
+  commit: e852312af4e29bda9b84c673545400e5fd00e23b
   extracted_at: "2026-03-23T01:28:39Z"
 import:
   rtl:
